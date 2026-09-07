@@ -59,7 +59,7 @@ defmodule UliCommunityWeb.UserLoginLive do
                 placeholder="you@example.com"
                 class="w-full px-3.5 py-2.5 bg-white border border-[#d6c7b2] rounded-lg text-[#4e1818] placeholder-[#4e1818]/40 text-sm focus:outline-none focus:border-[#ff5e00] focus:ring-1 focus:ring-[#ff5e00] transition-colors duration-150"
               />
-              <.error :for={msg <- f[:email].errors}><%= msg %></.error>
+              <.error :for={msg <- f[:email].errors}><%= translate_error(msg) %></.error>
             </div>
 
             <!-- Password Input -->
@@ -85,7 +85,7 @@ defmodule UliCommunityWeb.UserLoginLive do
                 placeholder="••••••••"
                 class="w-full px-3.5 py-2.5 bg-white border border-[#d6c7b2] rounded-lg text-[#4e1818] placeholder-[#4e1818]/40 text-sm focus:outline-none focus:border-[#ff5e00] focus:ring-1 focus:ring-[#ff5e00] transition-colors duration-150"
               />
-              <.error :for={msg <- f[:password].errors}><%= msg %></.error>
+              <.error :for={msg <- f[:password].errors}><%= translate_error(msg) %></.error>
             </div>
 
             <!-- Remember Me Checkbox -->
